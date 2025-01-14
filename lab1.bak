@@ -1,0 +1,13 @@
+;task 1
+
+(- (+ 7 (* 13 22)) (* (/ 51 64) (- 19 (/ 45 (+ 32 11)))))
+
+(define PI 3.1415)
+
+(define x (/ PI 2))  ; x = π/4
+(+ (expt (sin x) 2) (expt (cos x) 2))
+(= (sin (* 2 x)) (* 2 (sin x) (cos x)))  
+(= (cos (* 2 x)) (- (expt (cos x) 2) (expt (sin x) 2)))
+
+;task 2
+
