@@ -1,3 +1,7 @@
+//Name: Dexter Day
+//Student number: 300192263
+//Q3: ~1 hours
+
 package main
 
 import (
