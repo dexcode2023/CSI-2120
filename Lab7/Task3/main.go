@@ -1,3 +1,6 @@
+// Name: Dexter Day
+// Student number: 300192263
+
 package main
 
 import (
@@ -9,7 +12,7 @@ var (
 	Count      int = 0
 	nFunctions int = 2
 )
-var sema = make(chan int)
+var sema = make(chan int, 1)
 
 func main() {
 	ch := make(chan int)
@@ -24,18 +27,22 @@ func main() {
 }
 func increment(ch chan int, nSteps int) {
 	for i := 0; i < nSteps; i++ {
+		sema <- 1
 		cnt := Count
 		time.Sleep(3 * time.Millisecond)
 		Count = cnt + 1
+		<-sema
 		ch <- 1
 	}
 	return
 }
 func decrement(ch chan int, nSteps int) {
 	for i := 0; i < nSteps; i++ {
+		sema <- 1
 		cnt := Count
 		time.Sleep(2 * time.Millisecond)
 		Count = cnt - 1
+		<-sema
 		ch <- 1
 	}
 	return
