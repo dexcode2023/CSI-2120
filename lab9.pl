@@ -54,12 +54,12 @@ run_tests :-
 
     % Task 2 Test
     count([2, 5, 1, 2, 3, 4, 1, 6, 1], 1, C),
-    writeln('Task 2 Test:'),
+    writeln('Task 2 Test'),
     writeln(C),
 
     % Task 3 Test
     removeRepetition([10, 20, 3, 21, 20, 10], L4),
-    writeln('Task 3 Test:'),
+    writeln('Task 3 Test'),
     writeln(L4).
 
 
